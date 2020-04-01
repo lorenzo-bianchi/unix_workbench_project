@@ -2,10 +2,15 @@
 # File: guessinggame.sh
 
 function guessing {
-    num=$(ls -a | wc -l)
+    num=$(ls -a | wc -l)-2
 
     echo "Guess how many files and directories (all of them) are here:"
     read num_user
+    while ! [[ "$num_user" =~ ^[0-9]+$ ]]
+    do
+         echo "Insert a number, please"
+         read num_user
+    done
 
     while [[ $num_user -ne $num ]]
     do
@@ -20,6 +25,11 @@ function guessing {
         echo ""
         echo "Try again:"
         read num_user
+        while ! [[ "$num_user" =~ ^[0-9]+$ ]]
+        do
+             echo "Insert a number, please"
+             read num_user
+        done
     done
 
     echo "Well done, bro!"

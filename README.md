@@ -1,5 +1,5 @@
 Peer-graded Assignment: Bash, Make, Git, and GitHub
 
-mer  1 apr 2020, 20.05.24, CEST
+mer  1 apr 2020, 21.26.29, CEST
 
-24
+38
